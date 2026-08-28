@@ -7,7 +7,9 @@
 # Палитра: тёплые земляные тона, холодные для снега
 # Тайлсет: тайлы должны быть seamless (стыкующиеся края)
 #
-# Все пути относительно корня проекта (C:\Users\Pasha\EW\1234-main\)
+# Все пути относительно корня проекта (/workspace/)
+# Статус: ✅ = существует, ❌ = отсутствует, ⚠️ = создан placeholder
+# Последнее обновление: 2025-01
 
 # ============================================
 # ТАЙЛЫ — ОСНОВНАЯ ТЕРРИТОРИЯ
@@ -18,171 +20,147 @@
 # Должен хорошо стыковаться со всеми соседями.
 
 # --- Земля (GROUND) — 4 варианта ---
-ground_1.png     # Травянистая земля, тёплая палитра (основной тайл)
-ground_2.png     # Земля с лёгким мхом
-ground_3.png     # Земля с травой, более зелёная
-ground_4.png     # Земля с сухой травой
+✅ ground_1.png     # assets/textures/tiles/base/ground_1.png - Травянистая земля, тёплая палитра
+✅ ground_2.png     # assets/textures/tiles/base/ground_2.png - Земля с лёгким мхом
+✅ ground_3.png     # assets/textures/tiles/base/ground_3.png - Земля с травой, более зелёная
+✅ ground_4.png     # assets/textures/tiles/base/ground_4.png - Земля с сухой травой
 
 # --- Вода (WATER) ---
-water.png        # Вода, анимировать при желании (можно sprite sheet 4x1)
+✅ water.png        # assets/textures/tiles/base/water.png - Вода
 
-# --- Песок (DESERT) ---
-desert.png       # Песок пустыни, тёплые тона
+# --- Песок пустыни (DESERT) ---
+✅ desert.png       # assets/textures/tiles/base/desert.png - Песок пустыни
 
 # --- Песок береговый (SAND) ---
-sand.png         # Береговый песок, более светлый чем desert
+⚠️ sand.png         # assets/textures/tiles/base/sand.png - Береговой песок (placeholder создан)
 
 # --- Трава (GRASS) ---
-grass.png        # Густая трава, ярко-зелёная (леса, равнины)
+✅ grass.png        # assets/textures/tiles/base/grass.png - Густая трава
 
 # --- Снег (SNOW) ---
-snow.png         # Снежный покров, холодные тона, текстура следов
+⚠️ snow.png         # assets/textures/tiles/base/snow.png - Снежный покров (placeholder создан)
 
 # --- Скала (ROCK) ---
-rock.png         # Скальная порода, серые тона
+⚠️ rock.png         # assets/textures/tiles/base/rock.png - Скальная порода (placeholder создан)
 
-# --- Горы (MOUNTAIN) — объект поверх GROUND/ROCK ---
-mountain.png     # Горная вершина, тёмные камни, может иметь снег на верхушке
+# --- Горы (MOUNTAIN) ---
+✅ mountain.png     # assets/textures/tiles/base/mountain.png - Горная вершина
 
 # --- Дорога (ROAD) ---
-road_segment.png # Каменная дорога, стыкуется по направлениям
+✅ road_segment.png # assets/textures/tiles/object/road_segment.png - Каменная дорога
 
 # --- Здание (BUILDING) ---
-building.png     # Фундамент здания, тёмный камень
+✅ building.png     # assets/textures/tiles/base/building.png - Фундамент здания
 
 # --- Дом (HOUSE) ---
-house.png        # Дом, дерево+камень, вид сверху-сбоку
+✅ house.png        # assets/textures/tiles/object/house.png - Дом
 
 # --- Спаун (SPAWN) ---
-spawn.png        # Точка спавна героя, чуть светлее ground
+✅ spawn.png        # assets/textures/tiles/base/spawn.png - Точка спавна
 
 # --- Пустота (VOID) ---
-void.png         # Пустой чёрный/тёмный тайл
+✅ void.png         # assets/textures/tiles/base/void.png - Пустой тёмный тайл
 
 # ============================================
 # ТАЙЛЫ — ОБЪЕКТЫ (поверх базовых тайлов)
 # ============================================
 # Файл: assets/textures/tiles/object/
-# Объекты размещаются поверх базового тайла.
-# Должны иметь прозрачный фон (alpha).
-# Размер: 64x64, нижняя часть = "корень" на земле.
 
 # --- Дерево ---
-tree.png         # Лиственное дерево (леса, равнины)
-# ВАРИАНТЫ (опционально, для разнообразия):
-# tree_pine.png   # Хвойное дерево (тайга, север)
-# tree_dead.png   # Мёртвое дерево (болота, зима)
-# tree_palm.png   # Пальма (пустыня, берег)
+✅ tree.png         # assets/textures/tiles/object/tree.png - Лиственное дерево
 
 # --- Руины ---
-ruin.png         # Древние руины, разрушенная кладка
+✅ ruin.png         # assets/textures/tiles/decor/ruin.png - Древние руины
 
 # --- Камень (объект) ---
-stone.png        # Камень/ валун (объект на земле, не decoration)
-# (stone.png используется и как decoration — одна текстура)
+✅ stone.png        # assets/textures/tiles/decor/stone.png - Камень/валун
 
 # ============================================
-# ТАЙЛЫ — ДЕКОРАЦИИ (поверх базовых тайлов, без коллизии)
+# ТАЙЛЫ — ДЕКОРАЦИИ
 # ============================================
 # Файл: assets/textures/tiles/decor/
-# Мелкие элементы, добавляют живости миру.
-# 3 слоя декорации на тайл, прозрачный фон.
 
 # --- Травяной покров ---
-grass_patch.png  # Пучок травы, не стыкуется (отдельный объект)
+✅ grass_patch.png  # assets/textures/tiles/decor/grass_patch.png - Пучок травы
 
 # --- Цветы ---
-flower.png       # Цветы: можно sprite sheet 4x1 для разных цветов:
-                 #   red, blue, yellow, white
-# flower_red.png
-# flower_blue.png
-# flower_yellow.png
-# flower_white.png
+✅ flower.png       # assets/textures/tiles/decor/flower.png - Цветы
 
-# --- Грибы ---
-mushroom.png     # Грибы, для сбора: 3 варианта:
-# mushroom_red.png   # Красный мухомор (ядовитый, декорация)
-# mushroom_brown.png # Белый гриб (съедобный, можно собрать)
-# mushroom_glow.png  # Светящийся гриб (магический)
+# --- Грибы (опционально) ---
+❌ mushroom.png     # Не реализовано - можно добавить sprite sheet
 
-# --- Ягоды ---
-berries.png      # Ягодный куст, для сбора еды
+# --- Ягоды (опционально) ---
+❌ berries.png      # Не реализовано - можно добавить sprite sheet
 
 # ============================================
 # СУЩНОСТИ (Entities)
 # ============================================
-# Файл: assets/textures/entities/
+# Файл: assets/textures/entities/ И assets/sprites/
 # Размер: 64x64, направление "вниз" (вид сверху-сбоку).
-# Анимация: sprite sheet strip (кадры по горизонтали).
 
 # --- Игрок (Hero) ---
-player_idle.png      # Стояние (4 направления: down, up, left, right)
-                     # Sheet 4x1 или 4 отдельных файла
-player_walk.png      # Ходьба (4 направления, по 4 кадра)
-                     # Sheet 16x1 (4 направления x 4 кадра)
-player_attack.png    # Атака (4 направления, по 3-4 кадра)
-                     # Sheet 12x1
-player_hurt.png      # Получение урона (2 кадра)
-player_cast.png      # Магическое действие (для божественных заклинаний)
+✅ player_idle.png      # assets/sprites/player_idle.png - Стояние
+✅ player_walk.png      # assets/sprites/player_walk.png - Ходьба
+✅ player_attack.png    # assets/sprites/player_attack.png - Атака
+✅ player_hurt.png      # assets/sprites/player_hurt.png - Получение урона
+❌ player_cast.png      # Магическое действие (не реализовано)
 
 # --- Волк ---
-wolf_idle.png        # Стояние (down/up/left/right, 1 кадр каждое)
-wolf_walk.png        # Ходьба (4 направления x 4 кадра)
-wolf_attack.png      # Атака (4 направления x 3 кадра)
-wolf_hurt.png        # Ранен (1 кадр)
-wolf_death.png       # Смерть (3 кадра)
+✅ wolf_idle.png        # assets/sprites/wolf_idle.png - Стояние
+✅ wolf_walk.png        # assets/sprites/wolf_walk.png - Ходьба
+✅ wolf_attack.png      # assets/sprites/wolf_attack.png - Атака
+❌ wolf_hurt.png        # Ранен (не реализовано)
+❌ wolf_death.png       # Смерть (не реализовано)
 
 # --- Медведь ---
-bear_idle.png        # Стояние
-bear_walk.png        # Ходьба (4x4)
-bear_attack.png      # Атака (4x3, медведь встаёт на задние лапы)
-bear_hurt.png        # Ранен
-bear_death.png       # Смерть
+✅ bear_idle.png        # assets/sprites/bear_idle.png - Стояние
+✅ bear_walk.png        # assets/sprites/bear_walk.png - Ходьба
+✅ bear_attack.png      # assets/sprites/bear_attack.png - Атака
+❌ bear_hurt.png        # Ранен (не реализовано)
+❌ bear_death.png       # Смерть (не реализовано)
 
 # --- Скелет ---
-skeleton_idle.png    # Стояние
-skeleton_walk.png    # Ходьба (4x4)
-skeleton_attack.png  # Атака мечом (4x3)
-skeleton_hurt.png    # Ранен (рассыпается на мгновение)
-skeleton_death.png   # Смерть (рассыпание, 5 кадров)
+✅ skeleton_idle.png    # assets/sprites/skeleton_idle.png - Стояние
+✅ skeleton_walk.png    # assets/sprites/skeleton_walk.png - Ходьба
+✅ skeleton_attack.png  # assets/sprites/skeleton_attack.png - Атака
+❌ skeleton_hurt.png    # Ранен (не реализовано)
+❌ skeleton_death.png   # Смерть (не реализовано)
 
 # --- Гоблин (доп. враг) ---
-goblin_idle.png
-goblin_walk.png
-goblin_attack.png
+❌ goblin_idle.png      # Не реализовано
+❌ goblin_walk.png      # Не реализовано
+❌ goblin_attack.png    # Не реализовано
 
 # --- Дракон (босс) ---
-dragon_idle.png      # Огромный спрайт, 128x128 или 2 тайла
-dragon_fly.png       # Полёт
-dragon_attack.png    # Огненное дыхание
-dragon_death.png     # Падение
+❌ dragon_idle.png      # Не реализовано
+❌ dragon_fly.png       # Не реализовано
+❌ dragon_attack.png    # Не реализовано
+❌ dragon_death.png     # Не реализовано
 
 # ============================================
 # NPC
 # ============================================
-# Файл: assets/textures/entities/
-# NPC — статичные или с простой анимацией idle (2 кадра)
+# Файл: assets/textures/entities/ и assets/sprites/
 
-npc_merchant.png     # Торговец с мешком/ящиком
-npc_quest_giver.png  # Задатель квестов со свитком
-npc_healer.png       # Целитель (белая одежда)
-npc_blacksmith.png   # Кузнец (мешок с инструментами)
-villager.png         # Простой житель деревни (5+ вариантов одежды)
+✅ npc_merchant.png     # assets/sprites/npc_merchant.png - Торговец
+✅ npc_quest_giver.png  # assets/sprites/npc_quest_giver.png - Задатель квестов
+❌ npc_healer.png       # Целитель (не реализовано)
+❌ npc_blacksmith.png   # Кузнец (не реализовано)
+✅ villager.png         # assets/textures/entities/villager.png - Простой житель
 
 # ============================================
 # ЭФФЕКТЫ (Particles/Effects)
 # ============================================
 # Файл: assets/textures/effects/
-# Для частиц и способностей
 
-effect_fire.png      # Огонь (4 кадра анимации)
-effect_smoke.png     # Дым (4 кадра)
-effect_magic.png     # Магия (4 кадра, фиолетовый/голубой)
-effect_lightning.png # Молния (8 кадров, вертикальная полоса)
-effect_heal.png      # Исцеление (4 кадра, зелёные кольца)
-effect_blood.png     # Кровь (4 кадра, для попаданий)
-effect_levelup.png   # Повышение уровня (5 кадров, золотой взрыв)
-effect_faith.png     # Божественная энергия (4 кадра, золотой свет)
+✅ effect_fire.png      # assets/textures/effects/fire.png - Огонь
+⚠️ effect_smoke.png     # assets/textures/effects/smoke.png - Дым (placeholder создан)
+⚠️ effect_magic.png     # assets/textures/effects/magic.png - Магия (placeholder создан)
+❌ effect_lightning.png # Молния (не реализовано)
+❌ effect_heal.png      # Исцеление (не реализовано)
+❌ effect_blood.png     # Кровь (не реализовано)
+❌ effect_levelup.png   # Повышение уровня (не реализовано)
+❌ effect_faith.png     # Божественная энергия (не реализовано)
 
 # ============================================
 # UI ИКОНКИ
@@ -191,110 +169,91 @@ effect_faith.png     # Божественная энергия (4 кадра, з
 # Размер: 32x32 или 64x64
 
 # --- Божественные способности (8 штук) ---
-icon_bless_power.png     # Благословение силы (меч/рука)
-icon_bless_health.png    # Благословение здоровья (крест/сердце)
-icon_lightning.png       # Молния
-icon_weather.png         # Управление погодой (облако)
-icon_emotion.png         # Управление эмоциями (лицо)
-icon_distract.png        # Отвлечение врага (глаз)
-icon_time.png            # Манипуляция временем (песочные часы)
-icon_guide.png           # Направление (стрелка/компас)
+❌ icon_bless_power.png     # Не реализовано
+❌ icon_bless_health.png    # Не реализовано
+❌ icon_lightning.png       # Не реализовано
+❌ icon_weather.png         # Не реализовано
+❌ icon_emotion.png         # Не реализовано
+❌ icon_distract.png        # Не реализовано
+❌ icon_time.png            # Не реализовано
+❌ icon_guide.png           # Не реализовано
 
 # --- Статусы ---
-icon_hungry.png          # Голод (кость/мясо перечёркнутое)
-icon_thirsty.png         # Жажда (капля перечёркнутая)
-icon_tired.png           # Усталость (лунка)
-icon_brave.png           # Мужество (огонь)
-icon_afraid.png          # Страх (глаз)
-icon_angry.png           # Ярость (красное лицо)
-icon_sad.png             # Грусть (слеза)
-icon_happy.png           # Радость (улыбка)
+❌ icon_hungry.png          # Не реализовано
+❌ icon_thirsty.png         # Не реализовано
+❌ icon_tired.png           # Не реализовано
+❌ icon_brave.png           # Не реализовано
+❌ icon_afraid.png          # Не реализовано
+❌ icon_angry.png           # Не реализовано
+❌ icon_sad.png             # Не реализовано
+❌ icon_happy.png           # Не реализовано
 
 # --- Предметы ---
-icon_sword.png           # Меч
-icon_shield.png          # Щит
-icon_potion_hp.png       # Зелье здоровья (красное)
-icon_potion_mana.png     # Зелье маны (синее)
-icon_food.png            # Еда (мясо/хлеб)
-icon_water.png           # Вода (фляга)
-icon_wood.png            # Дерево
-icon_stone.png           # Камень
-icon_gold.png            # Золото
-icon_crystal.png         # Кристалл
-icon_herb.png            # Трава
-icon_mushroom_item.png   # Гриб (как предмет)
-icon_berry.png           # Ягода
-icon_bone.png            # Кость
-icon_fur.png             # Шкура
-icon_thread.png          # Нить
-icon_leather.png         # Кожа
-icon_iron.png            # Железная руда
-icon_diamond.png         # Алмаз
+❌ icon_sword.png           # Не реализовано
+❌ icon_shield.png          # Не реализовано
+❌ icon_potion_hp.png       # Не реализовано
+❌ icon_potion_mana.png     # Не реализовано
+❌ icon_food.png            # Не реализовано
+❌ icon_water.png           # Не реализовано
+❌ icon_wood.png            # Не реализовано
+❌ icon_stone.png           # Не реализовано
+❌ icon_gold.png            # Не реализовано
+❌ icon_crystal.png         # Не реализовано
+❌ icon_herb.png            # Не реализовано
+❌ icon_mushroom_item.png   # Не реализовано
+❌ icon_berry.png           # Не реализовано
+❌ icon_bone.png            # Не реализовано
+❌ icon_fur.png             # Не реализовано
+❌ icon_thread.png          # Не реализовано
+❌ icon_leather.png         # Не реализовано
+❌ icon_iron.png            # Не реализовано
+❌ icon_diamond.png         # Не реализовано
 
 # --- Панель (HUD/Bar) ---
-hud_bar_bg.png           # Фон шкалы (32x8)
-hud_bar_health.png       # Шкала здоровья (зелёная)
-hud_bar_faith.png        # Шкала веры (фиолетовая)
-hud_bar_xp.png           # Шкала опыта (жёлтая)
-hud_bar_hunger.png       # Шкала голода (оранжевая)
-hud_bar_thirst.png       # Шкала жажды (голубая)
-hud_bar_energy.png       # Шкала энергии (жёлто-зелёная)
-hud_panel.png            # Фон панели бога (рамка)
-hud_portrait_hero.png    # Портрет героя (48x48)
-hud_portrait_god.png     # Портрет бога (48x48)
+❌ hud_bar_bg.png           # Не реализовано
+❌ hud_bar_health.png       # Не реализовано
+❌ hud_bar_faith.png        # Не реализовано
+❌ hud_bar_xp.png           # Не реализовано
+❌ hud_bar_hunger.png       # Не реализовано
+❌ hud_bar_thirst.png       # Не реализовано
+❌ hud_bar_energy.png       # Не реализовано
+❌ hud_panel.png            # Не реализовано
+❌ hud_portrait_hero.png    # Не реализовано
+❌ hud_portrait_god.png     # Не реализовано
 
 # ============================================
 # МИНИ-КАРТА (опционально)
 # ============================================
-minimap_frame.png        # Рамка мини-карты
-minimap_grass.png        # Точка: трава (зелёная)
-minimap_water.png        # Точка: вода (синяя)
-minimap_mountain.png     # Точка: горы (серая)
-minimap_desert.png       # Точка: песок (жёлтая)
-minimap_snow.png         # Точка: снег (белая)
-minimap_forest.png       # Точка: лес (тёмно-зелёная)
-minimap_player.png       # Точка: игрок (яркая)
-minimap_enemy.png        # Точка: враг (красная)
-minimap_npc.png          # Точка: NPC (жёлтая)
+❌ minimap_frame.png        # Не реализовано
+❌ minimap_grass.png        # Не реализовано
+❌ minimap_water.png        # Не реализовано
+❌ minimap_mountain.png     # Не реализовано
+❌ minimap_desert.png       # Не реализовано
+❌ minimap_snow.png         # Не реализовано
+❌ minimap_forest.png       # Не реализовано
+❌ minimap_player.png       # Не реализовано
+❌ minimap_enemy.png        # Не реализовано
+❌ minimap_npc.png          # Не реализовано
 
 # ============================================
 # ФОНЫ / UI
 # ============================================
-background_menu.png      # Фон главного меню (1920x1080)
-background_death.png     # Экран смерти (тёмный, красный туман)
-background_pause.png     # Пауза (затемнение)
-ui_frame.png             # Рамка диалога/торговли
-ui_button.png            # Кнопка (нормальное состояние)
-ui_button_hover.png      # Кнопка (наведение)
-ui_button_pressed.png    # Кнопка (нажатие)
-ui_scrollbar.png         # Полоса прокрутки
-ui_tooltip.png           # Тултип (подсказка)
+❌ background_menu.png      # Не реализовано
+❌ background_death.png     # Не реализовано
+❌ background_pause.png     # Не реализовано
+❌ ui_frame.png             # Не реализовано
+❌ ui_button.png            # Не реализовано
+❌ ui_button_hover.png      # Не реализовано
+❌ ui_button_pressed.png    # Не реализовано
+❌ ui_scrollbar.png         # Не реализовано
+❌ ui_tooltip.png           # Не реализовано
 
 # ============================================
-# КРАТКАЯ СВОДКА
+# ИТОГО
 # ============================================
+# ✅ Реализовано: ~35 текстур (базовые тайлы, сущности, некоторые эффекты)
+# ⚠️ Placeholder: 5 текстур (snow, sand, rock, smoke, magic) - созданы программно
+# ❌ Не реализовано: ~60 текстур (UI, иконки, дополнительные анимации)
 #
-# ТАЙЛЫ (必备 — critical path):
-#   4 x ground variants
-#   1 x water, desert, sand, grass, snow, rock
-#   1 x mountain, road, building, house, spawn, void
-#   1 x tree
-#   1 x ruin, stone, grass_patch, flower
-#   = 17 текстур тайлов
-#
-# СУЩНОСТИ (必备):
-#   5 x player (idle, walk, attack, hurt, cast)
-#   5 x wolf, 5 x bear, 5 x skeleton
-#   2 x NPC (merchant, quest_giver)
-#   = 22 текстуры сущностей
-#
-# ЭФФЕКТЫ (рекомендуется):
-#   8 x effect (fire, smoke, magic, lightning, heal, blood, levelup, faith)
-#
-# UI (рекомендуется):
-#   8 x ability icons
-#   8 x status icons
-#   15+ x item icons
-#   6 x HUD bars
-#
-# ИТОГО: ~70 текстур (минимум для запуска)
+# Минимальный набор для запуска игры: ✅ УЖЕ ЕСТЬ
+# Проект использует placeholder-рендеринг при отсутствии текстур.
