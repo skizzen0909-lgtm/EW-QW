@@ -56,7 +56,14 @@ void CombatSystem::processCombatRound() {
 void CombatSystem::handleEntityDeath(std::shared_ptr<Entity> killer, std::shared_ptr<Entity> victim) {
     if (!killer || !victim) return;
 
-    std::string enemyType = victim->getType();
+    // Используем getEnemyType() вместо getType() для правильной таблицы лута
+    std::string enemyType = "unknown";
+    if (auto enemy = std::dynamic_pointer_cast<Enemy>(victim)) {
+        enemyType = enemy->getEnemyType();
+    } else {
+        enemyType = victim->getType();
+    }
+    
     int playerLevel = killer->getLevel();
 
     std::ostringstream oss;
