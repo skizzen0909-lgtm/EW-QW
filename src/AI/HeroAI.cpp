@@ -41,6 +41,11 @@ void HeroAI::update(float deltaTime, Entity* entity) {
             recordVisit(pos.first, pos.second);
             lastPosition = pos;
         }
+        
+        // Обновление характеристик из Entity
+        if (entity->getAttributes()) {
+            currentStrength = static_cast<float>(entity->getStrength()) / 10.0f;
+        }
     }
 
     if (needCheckTimer >= 1.0f) {
@@ -64,7 +69,8 @@ void HeroAI::update(float deltaTime, Entity* entity) {
 
     if (entity) {
         currentStrength = static_cast<float>(entity->getHealth()) / entity->getMaxHealth()
-                        + static_cast<float>(entity->getLevel()) * 0.1f;
+                        + static_cast<float>(entity->getLevel()) * 0.1f
+                        + (entity->getAttributes() ? entity->getAttributes()->calculateMeleeDamage() : 0.0f);
     }
 }
 

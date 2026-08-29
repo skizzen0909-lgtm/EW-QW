@@ -3,6 +3,7 @@
 #define ENTITY_H
 
 #include "AI/AIBase.h"
+#include "Entities/HeroAttributes.h"
 #include <string>
 #include <memory>
 #include <vector>
@@ -42,6 +43,8 @@ protected: // <<< Вернемся к protected для остальных пол
     int experience;
     int gold;
     std::unordered_map<std::string, int> stats;
+    // --- ХАРАКТЕРИСТИКИ ГЕРОЯ ---
+    std::unique_ptr<HeroAttributes> attributes;
 public:
     Entity(const std::string& name, int health = 100);
     virtual ~Entity() = default;
@@ -58,6 +61,16 @@ public:
     int getExperience() const;
     int getGold() const;
     int getStat(const std::string& statName) const;
+    
+    // --- ХАРАКТЕРИСТИКИ ---
+    HeroAttributes* getAttributes() const;
+    void setAttributes(std::unique_ptr<HeroAttributes> attrs);
+    int getStrength() const;
+    int getAgility() const;
+    int getIntelligence() const;
+    int getWisdom() const;
+    int getCharisma() const;
+    
     // Сеттеры
     void setName(const std::string& newName);
     virtual     void setHealth(int newHealth);

@@ -1,7 +1,7 @@
 // Decisions/Decision.cpp
 
 #include "Decision.h"
-#include "Entity.h"
+#include "Entities/Entity.h"
 #include "Events/Event.h"
 #include <iostream>
 #include <algorithm>
@@ -42,4 +42,18 @@ void Decision::removeConsequence(const std::shared_ptr<Event>& event) {
     if (it != consequences.end()) {
         consequences.erase(it);
     }
+}
+
+bool Decision::execute(Entity* actor) {
+    // Базовая реализация - просто выполняем последствия
+    if (!actor) return false;
+    
+    bool allSuccess = true;
+    for (auto& consequence : consequences) {
+        if (consequence) {
+            consequence->execute();
+        }
+    }
+    
+    return allSuccess;
 }

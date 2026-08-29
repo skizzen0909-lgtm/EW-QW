@@ -1,5 +1,6 @@
 ﻿// src/Entities/Entity.cpp
 #include "Entities/Entity.h"
+#include "Entities/HeroAttributes.h"
 #include "Items/Item.h" // Добавлено: включаем Item.h
 #include "Quests/Quest.h" // Добавлено: включаем Quest.h
 #include "AI/AIBase.h" // Добавлено: включаем AIBase.h
@@ -16,7 +17,8 @@ Entity::Entity(const std::string& name, int health)
     posX(-1), posY(-1), currentLocation(nullptr),
     aiUpdateTimer(0.0f), moveTimer(0.0f),
     level(1), experience(0), gold(0),
-    plannedMoveX(-1), plannedMoveY(-1), hasPlannedMove(false) 
+    plannedMoveX(-1), plannedMoveY(-1), hasPlannedMove(false),
+    attributes(std::make_unique<HeroAttributes>())
 {
 }
 
@@ -34,6 +36,35 @@ int Entity::getExperience() const { return experience; }
 int Entity::getStat(const std::string& statName) const {
     auto it = stats.find(statName);
     return (it != stats.end()) ? it->second : 0;
+}
+
+// --- ХАРАКТЕРИСТИКИ ---
+HeroAttributes* Entity::getAttributes() const {
+    return attributes.get();
+}
+
+void Entity::setAttributes(std::unique_ptr<HeroAttributes> attrs) {
+    attributes = std::move(attrs);
+}
+
+int Entity::getStrength() const {
+    return attributes ? attributes->getStrength() : 10;
+}
+
+int Entity::getAgility() const {
+    return attributes ? attributes->getAgility() : 10;
+}
+
+int Entity::getIntelligence() const {
+    return attributes ? attributes->getIntelligence() : 10;
+}
+
+int Entity::getWisdom() const {
+    return attributes ? attributes->getWisdom() : 10;
+}
+
+int Entity::getCharisma() const {
+    return attributes ? attributes->getCharisma() : 10;
 }
 
 // --- Сеттеры ---

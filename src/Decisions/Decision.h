@@ -35,8 +35,8 @@ public:
     void addConsequence(std::shared_ptr<Event> event);
     void removeConsequence(const std::shared_ptr<Event>& event);
 
-    // Методы принятия решения
-    
+    // Метод выполнения решения (переопределяется в наследниках)
+    virtual bool execute(Entity* actor);
 
     // Запрет копирования
     Decision(const Decision&) = delete;
