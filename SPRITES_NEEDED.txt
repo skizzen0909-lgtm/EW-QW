@@ -1,0 +1,259 @@
+# ============================================
+# Список спрайтов для Eternal Wanderer
+# ============================================
+#
+# Стиль: пиксель-арт, 64x64 px
+# Формат: PNG с прозрачностью
+# Палитра: тёплые земляные тона, холодные для снега
+# Тайлсет: тайлы должны быть seamless (стыкующиеся края)
+#
+# Все пути относительно корня проекта (/workspace/)
+# Статус: ✅ = существует, ❌ = отсутствует, ⚠️ = создан placeholder
+# Последнее обновление: 2025-01
+
+# ============================================
+# ТАЙЛЫ — ОСНОВНАЯ ТЕРРИТОРИЯ
+# ============================================
+# Файл: assets/textures/tiles/base/
+#
+# Каждый базовый тайл — один квадрат 64x64, Seamless.
+# Должен хорошо стыковаться со всеми соседями.
+
+# --- Земля (GROUND) — 4 варианта ---
+✅ ground_1.png     # assets/textures/tiles/base/ground_1.png - Травянистая земля, тёплая палитра
+✅ ground_2.png     # assets/textures/tiles/base/ground_2.png - Земля с лёгким мхом
+✅ ground_3.png     # assets/textures/tiles/base/ground_3.png - Земля с травой, более зелёная
+✅ ground_4.png     # assets/textures/tiles/base/ground_4.png - Земля с сухой травой
+
+# --- Вода (WATER) ---
+✅ water.png        # assets/textures/tiles/base/water.png - Вода
+
+# --- Песок пустыни (DESERT) ---
+✅ desert.png       # assets/textures/tiles/base/desert.png - Песок пустыни
+
+# --- Песок береговый (SAND) ---
+⚠️ sand.png         # assets/textures/tiles/base/sand.png - Береговой песок (placeholder создан)
+
+# --- Трава (GRASS) ---
+✅ grass.png        # assets/textures/tiles/base/grass.png - Густая трава
+
+# --- Снег (SNOW) ---
+⚠️ snow.png         # assets/textures/tiles/base/snow.png - Снежный покров (placeholder создан)
+
+# --- Скала (ROCK) ---
+⚠️ rock.png         # assets/textures/tiles/base/rock.png - Скальная порода (placeholder создан)
+
+# --- Горы (MOUNTAIN) ---
+✅ mountain.png     # assets/textures/tiles/base/mountain.png - Горная вершина
+
+# --- Дорога (ROAD) ---
+✅ road_segment.png # assets/textures/tiles/object/road_segment.png - Каменная дорога
+
+# --- Здание (BUILDING) ---
+✅ building.png     # assets/textures/tiles/base/building.png - Фундамент здания
+
+# --- Дом (HOUSE) ---
+✅ house.png        # assets/textures/tiles/object/house.png - Дом
+
+# --- Спаун (SPAWN) ---
+✅ spawn.png        # assets/textures/tiles/base/spawn.png - Точка спавна
+
+# --- Пустота (VOID) ---
+✅ void.png         # assets/textures/tiles/base/void.png - Пустой тёмный тайл
+
+# ============================================
+# ТАЙЛЫ — ОБЪЕКТЫ (поверх базовых тайлов)
+# ============================================
+# Файл: assets/textures/tiles/object/
+
+# --- Дерево ---
+✅ tree.png         # assets/textures/tiles/object/tree.png - Лиственное дерево
+
+# --- Руины ---
+✅ ruin.png         # assets/textures/tiles/decor/ruin.png - Древние руины
+
+# --- Камень (объект) ---
+✅ stone.png        # assets/textures/tiles/decor/stone.png - Камень/валун
+
+# ============================================
+# ТАЙЛЫ — ДЕКОРАЦИИ
+# ============================================
+# Файл: assets/textures/tiles/decor/
+
+# --- Травяной покров ---
+✅ grass_patch.png  # assets/textures/tiles/decor/grass_patch.png - Пучок травы
+
+# --- Цветы ---
+✅ flower.png       # assets/textures/tiles/decor/flower.png - Цветы
+
+# --- Грибы (опционально) ---
+❌ mushroom.png     # Не реализовано - можно добавить sprite sheet
+
+# --- Ягоды (опционально) ---
+❌ berries.png      # Не реализовано - можно добавить sprite sheet
+
+# ============================================
+# СУЩНОСТИ (Entities)
+# ============================================
+# Файл: assets/textures/entities/ И assets/sprites/
+# Размер: 64x64, направление "вниз" (вид сверху-сбоку).
+
+# --- Игрок (Hero) ---
+✅ player_idle.png      # assets/sprites/player_idle.png - Стояние
+✅ player_walk.png      # assets/sprites/player_walk.png - Ходьба
+✅ player_attack.png    # assets/sprites/player_attack.png - Атака
+✅ player_hurt.png      # assets/sprites/player_hurt.png - Получение урона
+❌ player_cast.png      # Магическое действие (не реализовано)
+
+# --- Волк ---
+✅ wolf_idle.png        # assets/sprites/wolf_idle.png - Стояние
+✅ wolf_walk.png        # assets/sprites/wolf_walk.png - Ходьба
+✅ wolf_attack.png      # assets/sprites/wolf_attack.png - Атака
+❌ wolf_hurt.png        # Ранен (не реализовано)
+❌ wolf_death.png       # Смерть (не реализовано)
+
+# --- Медведь ---
+✅ bear_idle.png        # assets/sprites/bear_idle.png - Стояние
+✅ bear_walk.png        # assets/sprites/bear_walk.png - Ходьба
+✅ bear_attack.png      # assets/sprites/bear_attack.png - Атака
+❌ bear_hurt.png        # Ранен (не реализовано)
+❌ bear_death.png       # Смерть (не реализовано)
+
+# --- Скелет ---
+✅ skeleton_idle.png    # assets/sprites/skeleton_idle.png - Стояние
+✅ skeleton_walk.png    # assets/sprites/skeleton_walk.png - Ходьба
+✅ skeleton_attack.png  # assets/sprites/skeleton_attack.png - Атака
+❌ skeleton_hurt.png    # Ранен (не реализовано)
+❌ skeleton_death.png   # Смерть (не реализовано)
+
+# --- Гоблин (доп. враг) ---
+❌ goblin_idle.png      # Не реализовано
+❌ goblin_walk.png      # Не реализовано
+❌ goblin_attack.png    # Не реализовано
+
+# --- Дракон (босс) ---
+❌ dragon_idle.png      # Не реализовано
+❌ dragon_fly.png       # Не реализовано
+❌ dragon_attack.png    # Не реализовано
+❌ dragon_death.png     # Не реализовано
+
+# ============================================
+# NPC
+# ============================================
+# Файл: assets/textures/entities/ и assets/sprites/
+
+✅ npc_merchant.png     # assets/sprites/npc_merchant.png - Торговец
+✅ npc_quest_giver.png  # assets/sprites/npc_quest_giver.png - Задатель квестов
+❌ npc_healer.png       # Целитель (не реализовано)
+❌ npc_blacksmith.png   # Кузнец (не реализовано)
+✅ villager.png         # assets/textures/entities/villager.png - Простой житель
+
+# ============================================
+# ЭФФЕКТЫ (Particles/Effects)
+# ============================================
+# Файл: assets/textures/effects/
+
+✅ effect_fire.png      # assets/textures/effects/fire.png - Огонь
+⚠️ effect_smoke.png     # assets/textures/effects/smoke.png - Дым (placeholder создан)
+⚠️ effect_magic.png     # assets/textures/effects/magic.png - Магия (placeholder создан)
+❌ effect_lightning.png # Молния (не реализовано)
+❌ effect_heal.png      # Исцеление (не реализовано)
+❌ effect_blood.png     # Кровь (не реализовано)
+❌ effect_levelup.png   # Повышение уровня (не реализовано)
+❌ effect_faith.png     # Божественная энергия (не реализовано)
+
+# ============================================
+# UI ИКОНКИ
+# ============================================
+# Файл: assets/textures/ui/
+# Размер: 32x32 или 64x64
+
+# --- Божественные способности (8 штук) ---
+❌ icon_bless_power.png     # Не реализовано
+❌ icon_bless_health.png    # Не реализовано
+❌ icon_lightning.png       # Не реализовано
+❌ icon_weather.png         # Не реализовано
+❌ icon_emotion.png         # Не реализовано
+❌ icon_distract.png        # Не реализовано
+❌ icon_time.png            # Не реализовано
+❌ icon_guide.png           # Не реализовано
+
+# --- Статусы ---
+❌ icon_hungry.png          # Не реализовано
+❌ icon_thirsty.png         # Не реализовано
+❌ icon_tired.png           # Не реализовано
+❌ icon_brave.png           # Не реализовано
+❌ icon_afraid.png          # Не реализовано
+❌ icon_angry.png           # Не реализовано
+❌ icon_sad.png             # Не реализовано
+❌ icon_happy.png           # Не реализовано
+
+# --- Предметы ---
+❌ icon_sword.png           # Не реализовано
+❌ icon_shield.png          # Не реализовано
+❌ icon_potion_hp.png       # Не реализовано
+❌ icon_potion_mana.png     # Не реализовано
+❌ icon_food.png            # Не реализовано
+❌ icon_water.png           # Не реализовано
+❌ icon_wood.png            # Не реализовано
+❌ icon_stone.png           # Не реализовано
+❌ icon_gold.png            # Не реализовано
+❌ icon_crystal.png         # Не реализовано
+❌ icon_herb.png            # Не реализовано
+❌ icon_mushroom_item.png   # Не реализовано
+❌ icon_berry.png           # Не реализовано
+❌ icon_bone.png            # Не реализовано
+❌ icon_fur.png             # Не реализовано
+❌ icon_thread.png          # Не реализовано
+❌ icon_leather.png         # Не реализовано
+❌ icon_iron.png            # Не реализовано
+❌ icon_diamond.png         # Не реализовано
+
+# --- Панель (HUD/Bar) ---
+❌ hud_bar_bg.png           # Не реализовано
+❌ hud_bar_health.png       # Не реализовано
+❌ hud_bar_faith.png        # Не реализовано
+❌ hud_bar_xp.png           # Не реализовано
+❌ hud_bar_hunger.png       # Не реализовано
+❌ hud_bar_thirst.png       # Не реализовано
+❌ hud_bar_energy.png       # Не реализовано
+❌ hud_panel.png            # Не реализовано
+❌ hud_portrait_hero.png    # Не реализовано
+❌ hud_portrait_god.png     # Не реализовано
+
+# ============================================
+# МИНИ-КАРТА (опционально)
+# ============================================
+❌ minimap_frame.png        # Не реализовано
+❌ minimap_grass.png        # Не реализовано
+❌ minimap_water.png        # Не реализовано
+❌ minimap_mountain.png     # Не реализовано
+❌ minimap_desert.png       # Не реализовано
+❌ minimap_snow.png         # Не реализовано
+❌ minimap_forest.png       # Не реализовано
+❌ minimap_player.png       # Не реализовано
+❌ minimap_enemy.png        # Не реализовано
+❌ minimap_npc.png          # Не реализовано
+
+# ============================================
+# ФОНЫ / UI
+# ============================================
+❌ background_menu.png      # Не реализовано
+❌ background_death.png     # Не реализовано
+❌ background_pause.png     # Не реализовано
+❌ ui_frame.png             # Не реализовано
+❌ ui_button.png            # Не реализовано
+❌ ui_button_hover.png      # Не реализовано
+❌ ui_button_pressed.png    # Не реализовано
+❌ ui_scrollbar.png         # Не реализовано
+❌ ui_tooltip.png           # Не реализовано
+
+# ============================================
+# ИТОГО
+# ============================================
+# ✅ Реализовано: ~35 текстур (базовые тайлы, сущности, некоторые эффекты)
+# ⚠️ Placeholder: 5 текстур (snow, sand, rock, smoke, magic) - созданы программно
+# ❌ Не реализовано: ~60 текстур (UI, иконки, дополнительные анимации)
+#
+# Минимальный набор для запуска игры: ✅ УЖЕ ЕСТЬ
+# Проект использует placeholder-рендеринг при отсутствии текстур.

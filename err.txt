@@ -1,0 +1,15 @@
+Failed to load image "assets/textures/tiles/base/snow.png". Reason: Unable to open file
+Failed to load texture: snow from assets/textures/tiles/base/snow.png
+Failed to load image "assets/textures/tiles/base/sand.png". Reason: Unable to open file
+Failed to load texture: sand from assets/textures/tiles/base/sand.png
+Failed to load image "assets/textures/tiles/base/rock.png". Reason: Unable to open file
+Failed to load texture: rock from assets/textures/tiles/base/rock.png
+Failed to load image "assets/textures/effects/smoke.png". Reason: Unable to open file
+Failed to load effect texture: assets/textures/effects/smoke.png
+Failed to load image "assets/textures/effects/magic.png". Reason: Unable to open file
+Failed to load effect texture: assets/textures/effects/magic.png
+Failed to load font "assets/fonts/consolas.ttf" (failed to create the font face)
+Failed to load font: consolas from assets/fonts/consolas.ttf
+Failed to load font "assets/fonts/times.ttf" (failed to create the font face)
+Failed to load font: times from assets/fonts/times.ttf
+Ошибка: невозможно начать диалог!
